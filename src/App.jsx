@@ -1,20 +1,21 @@
 import React from 'react';
-import Navbar from './components/Navbar'; 
-import Hero from './components/Hero';
-import About from './components/About';
-import './App.css'; 
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Portofolio from './pages/Portofolio';
+import Contact from './pages/Contact';
 
-function App() {
+const App = () => {
   return (
-    <div className="bg-[#272727] min-h-screen text-white">
+    <>
       <Navbar />
-      <Hero />
-      <About />
-      {/* Konten lainnya */}
-      <div className="p-4">
-      </div>
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/portofolio" element={<Portofolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;

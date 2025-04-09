@@ -1,30 +1,35 @@
 import React from 'react';
+import { Code, ClipboardList } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="bg-[#1e1e1e] text-white py-20 px-6 md:px-16">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        {/* FOTO PROFIL */}
-        <div className="flex justify-center md:justify-start">
-          <img
-            src="/profile.png" // ganti sesuai nama file kamu
-            alt="Allya Maulida"
-            className="rounded-full w-48 h-48 object-cover border-4 border-green-500 shadow-lg"
-          />
-        </div>
+    <section id="about" className="bg-[rgb(0,0,0)] text-white py-20 px-6 md:px-16">
 
-        {/* DESKRIPSI DIRI */}
-        <div>
-          <h2 className="text-3xl font-bold text-green-400 mb-4">About Me</h2>
-          <p className="text-gray-300 mb-4 leading-relaxed text-lg">
-            Saya Allya Maulida, mahasiswa semester 4 Program Studi D3-Teknik Informatika di Politeknik Negeri Semarang dengan IPK 3.94. Saya memiliki ketertarikan dalam pengembangan web, khususnya di bidang backend menggunakan Laravel, serta desain sistem dan UI/UX.
-          </p>
-          <p className="text-gray-300 mb-4 leading-relaxed text-lg">
-            Saya aktif mengikuti kompetisi seperti KRI, KMIPN, dan ITC, dan pernah meraih juara 3 Web Development. Saya juga memiliki pengalaman dalam proyek-proyek seperti website donasi, sistem deteksi penyakit tanaman, dan desain aplikasi anti-bullying.
-          </p>
-          <p className="text-gray-300 leading-relaxed text-lg">
-            Saya dikenal sebagai pribadi yang kreatif, cepat belajar, berpikir kritis, dan terbuka terhadap tantangan baru.
-          </p>
+      {/* WHAT I DO */}
+      <div className="max-w-5xl mx-auto mt-16">
+        <h3 className="text-3xl font-bold text-green-400 text-center mb-10">What I Do</h3>
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Web Development */}
+          <div className="bg-[#2a2a2a] p-6 rounded-2xl shadow-lg border border-green-500">
+            <div className="flex items-center justify-center mb-4">
+              <Code className="w-10 h-10 text-green-400" />
+            </div>
+            <h4 className="text-xl font-semibold mb-2 text-white text-center">Web Development</h4>
+            <p className="text-gray-300 text-center">
+              Membangun website yang fungsional dan responsif menggunakan Laravel, dengan fokus pada performa dan keamanan.
+            </p>
+          </div>
+
+          {/* UI/UX Design */}
+          <div className="bg-[#2a2a2a] p-6 rounded-2xl shadow-lg border border-blue-500">
+            <div className="flex items-center justify-center mb-4">
+              <ClipboardList className="w-10 h-10 text-blue-400" />
+            </div>
+            <h4 className="text-xl font-semibold mb-2 text-white text-center">UI/UX Design</h4>
+            <p className="text-gray-300 text-center">
+              Mendesain antarmuka pengguna yang menarik dan intuitif menggunakan Figma, dengan pendekatan riset dan kenyamanan pengguna.
+            </p>
+          </div>
         </div>
       </div>
     </section>

@@ -22,7 +22,7 @@ const Hero = () => {
         </p>
         <div className="flex justify-center gap-4">
           <a
-            href="#portfolio"
+            href="https://drive.google.com/file/d/1jKZH7cv2zAm0eIQdzE-HiB6-YkP9V-bV/view?usp=drive_link"
             className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full transition"
           >
             View Portfolio
