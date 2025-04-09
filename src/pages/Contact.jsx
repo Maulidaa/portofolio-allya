@@ -1,8 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from '../components/Footer';
 import { Mail, Instagram, Github, Linkedin } from 'lucide-react';
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const formUrl = 'https://formsubmit.co/ajax/maulidaallya06@gmail.com';
+    const response = await fetch(formUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      setShowSuccess(true);
+      setFormData({ name: '', email: '', message: '' });
+
+      setTimeout(() => setShowSuccess(false), 5000);
+    } else {
+      alert('Gagal mengirim pesan. Silakan coba lagi.');
+    }
+  };
+
   return (
     <div className="bg-[#272727] text-white min-h-screen flex flex-col justify-between">
       <main className="max-w-3xl mx-auto w-full px-8 pt-24 pb-16">
@@ -11,16 +49,16 @@ const Contact = () => {
           Jika kamu ingin berdiskusi, kolaborasi, atau sekadar menyapa, silakan isi form di bawah atau hubungi saya melalui email.
         </p>
 
-        {/* Form Kontak via FormSubmit */}
+        {showSuccess && (
+          <div className="mb-6 p-4 bg-green-600 text-white text-center rounded-lg shadow">
+            Pesanmu berhasil dikirim! Terima kasih telah menghubungi saya.
+          </div>
+        )}
+
         <form
-          action="https://formsubmit.co/maulidaallya06@gmail.com"
-          method="POST"
+          onSubmit={handleSubmit}
           className="space-y-6 bg-[#1e1e1e] p-6 rounded-2xl shadow-lg"
         >
-          {/* Anti bot & redirect */}
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you" />
-
           <div>
             <label className="block mb-1 text-sm font-medium">Nama</label>
             <input
@@ -28,6 +66,8 @@ const Contact = () => {
               name="name"
               required
               placeholder="Nama kamu"
+              value={formData.name}
+              onChange={handleChange}
               className="w-full p-3 rounded-md bg-[#2e2e2e] text-white border border-gray-600 focus:outline-none focus:border-green-400"
             />
           </div>
@@ -38,6 +78,8 @@ const Contact = () => {
               name="email"
               required
               placeholder="email@example.com"
+              value={formData.email}
+              onChange={handleChange}
               className="w-full p-3 rounded-md bg-[#2e2e2e] text-white border border-gray-600 focus:outline-none focus:border-green-400"
             />
           </div>
@@ -48,6 +90,8 @@ const Contact = () => {
               required
               placeholder="Tulis pesanmu di sini..."
               rows="5"
+              value={formData.message}
+              onChange={handleChange}
               className="w-full p-3 rounded-md bg-[#2e2e2e] text-white border border-gray-600 focus:outline-none focus:border-green-400"
             ></textarea>
           </div>
@@ -61,7 +105,6 @@ const Contact = () => {
           </div>
         </form>
 
-        {/* Kontak Langsung */}
         <div className="mt-12 text-center space-y-4">
           <p className="flex justify-center items-center gap-2 text-gray-300">
             <Mail className="w-4 h-4" /> maulidaallya06@gmail.com
