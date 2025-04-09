@@ -1,5 +1,5 @@
 import React from "react";
-import { Instagram, Mail, Github, Linkedin } from "lucide-react";
+import { Instagram, Mail, Github, Linkedin, MessageCircle } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -24,6 +24,9 @@ const Footer = () => {
           </a>
           <a href="https://www.linkedin.com/in/allya-maulida-403125329/" target="_blank" rel="noopener noreferrer">
             <Linkedin className="w-5 h-5 hover:text-blue-400 transition" />
+          </a>
+          <a href="https://wa.me/6281617870213" target="_blank" rel="noopener noreferrer">
+            <MessageCircle className="w-5 h-5 hover:text-green-500 transition" />
           </a>
         </div>
       </div>

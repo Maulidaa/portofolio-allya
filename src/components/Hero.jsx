@@ -14,12 +14,12 @@ const Hero = () => {
           />
         </div>
      <div className="max-w-6xl mx-auto flex flex-col items-start text-left">
-        <h1 className="text-2xl md:text-4xl font-bold mb-4">
-          Hi, I'm <span className="text-green-400">Allya Maulida</span> — A passionate developer who builds elegant and user-friendly websites.
-        </h1>
-        <p className="text-lg md:text-xl text-gray-300 mb-6">
-        an enthusiastic individual who loves learning new things and enjoys working in a team. I believe that collaboration and a growth mindset are essential to creating meaningful and impactful work.
-        </p>
+     <h1 className="text-2xl md:text-4xl font-bold mb-4">
+      Hi, I'm <span className="text-green-400">Allya Maulida</span>
+    </h1>
+    <p className="text-lg md:text-xl text-gray-300 mb-6">
+      I'm a 4th semester Informatics Engineering student with an interest in backend development, system design, and visual design like UI/UX and graphics. I also enjoy building websites and learning new things. I work well in teams and always try to improve my skills.
+    </p>
         <div className="flex justify-center gap-4">
           <a
             href="https://drive.google.com/file/d/1jKZH7cv2zAm0eIQdzE-HiB6-YkP9V-bV/view?usp=drive_link"

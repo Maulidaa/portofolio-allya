@@ -4,7 +4,6 @@ import { Code, ClipboardList } from 'lucide-react';
 const About = () => {
   return (
     <section id="about" className="bg-[rgb(0,0,0)] text-white py-20 px-6 md:px-16">
-
       {/* WHAT I DO */}
       <div className="max-w-5xl mx-auto mt-16">
         <h3 className="text-3xl font-bold text-green-400 text-center mb-10">What I Do</h3>
@@ -16,7 +15,7 @@ const About = () => {
             </div>
             <h4 className="text-xl font-semibold mb-2 text-white text-center">Web Development</h4>
             <p className="text-gray-300 text-center">
-              Membangun website yang fungsional dan responsif menggunakan Laravel, dengan fokus pada performa dan keamanan.
+              Saya mengembangkan website yang responsif dan dinamis menggunakan Laravel dan teknologi modern lainnya. Fokus utama saya adalah memastikan fungsionalitas berjalan dengan baik serta menjaga performa dan tampilan yang rapi.
             </p>
           </div>
 
@@ -27,13 +26,13 @@ const About = () => {
             </div>
             <h4 className="text-xl font-semibold mb-2 text-white text-center">UI/UX Design</h4>
             <p className="text-gray-300 text-center">
-              Mendesain antarmuka pengguna yang menarik dan intuitif menggunakan Figma, dengan pendekatan riset dan kenyamanan pengguna.
+              Saya juga memiliki ketertarikan dalam merancang antarmuka pengguna yang sederhana dan nyaman digunakan. Dalam prosesnya, saya menggunakan Figma untuk membuat desain yang sesuai dengan kebutuhan pengguna.
             </p>
           </div>
         </div>
       </div>
     </section>
   );
-};
+}
 
 export default About;
